@@ -1,0 +1,25 @@
+@use '_variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: $primaryFont;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: $backgroundColor;
+    @media only screen and (min-width: 1440px) {
+        background-color: $backgrounDesktopColor;
+    }
+}

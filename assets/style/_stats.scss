@@ -1,0 +1,75 @@
+@use '_variables' as *;
+
+.stats {
+    margin-top: 246px;
+    background: $whiteColor;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    width: 327px;
+    height: 412px;
+    border: 1px solid $mainBorderColor;
+    border-radius: 8px;
+
+    .backed {
+        margin-top: 32px;
+    }
+
+    .backed,
+    .total-backers,
+    .days-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            padding-bottom: 9px;
+        }
+
+        p {
+            font-size: 14px;
+            color: $paraColor;
+            font-style: normal;
+            text-align: center;
+            padding-bottom: 24px;
+        }
+
+        hr {
+            background: $blackColor;
+            width: 80px;
+            height: 1px;
+            opacity: 0.15;
+        }
+    }
+
+    .days-left {
+        p {
+            padding-bottom: 32px;
+        }
+    }
+
+    progress[value] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 279px;
+        height: 12px;
+
+        &::-webkit-progress-bar {
+            mix-blend-mode: normal;
+            background-color: $backgroundColor;
+            border-radius: 33.5px;
+        }
+        &::-webkit-progress-value {
+            background-color: $buttonBlueColor;
+            border-radius: 33.5px;
+        }
+    }
+}
