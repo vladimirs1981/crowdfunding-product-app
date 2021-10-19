@@ -59,8 +59,14 @@
         display: flex;
         align-items: center;
         position: relative;
+        cursor: pointer;
 
         svg {
+            color: $bookmarkSVGColor;
+
+            path {
+                color: $bookmarkPathColor;
+            }
             @media only screen and (min-width: 1440px) {
                 position: absolute;
                 right: 186px;
@@ -80,6 +86,13 @@
             font-size: 16px;
             line-height: 20px;
             margin-right: 9px;
+            cursor: pointer;
+            &:hover {
+                background-color: $buttonHoverBlueColor;
+            }
+            &:active {
+                background-color: $buttonBlueColor;
+            }
             @media only screen and (min-width: 1440px) {
                 width: 204px;
                 margin-left: 48px;
@@ -92,15 +105,32 @@
             @media only screen and (min-width: 1440px) {
                 display: block;
                 margin: 0;
-                background: rgba($color: #2f2f2f, $alpha: 0.05);
+                background: $bookmarkButtonColor;
                 font-family: Commissioner;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 16px;
                 line-height: 20px;
-                color: #7a7a7a;
+                color: $paraColor;
                 margin-right: 48px;
                 width: 174px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .bookmarked {
+        svg {
+            color: $buttonHoverBlueColor;
+
+            path {
+                color: $whiteColor;
+            }
+        }
+
+        .bookmark {
+            @media only screen and (min-width: 1440px) {
+                color: $buttonHoverBlueColor;
             }
         }
     }

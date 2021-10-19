@@ -13,6 +13,24 @@
     height: 412px;
     border: 1px solid $mainBorderColor;
     border-radius: 8px;
+    @media only screen and (min-width: 1440px) {
+        width: 730px;
+        height: 212px;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 216px;
+
+        .stats-div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            margin-bottom: 32px;
+            align-self: flex-start;
+        }
+    }
 
     .backed {
         margin-top: 32px;
@@ -26,6 +44,13 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 24px;
+        @media only screen and (min-width: 1440px) {
+            margin: 0;
+            padding-left: 47px;
+            padding-right: 42px;
+            border-right: 1px solid $statsBorderColor;
+            align-items: flex-start;
+        }
 
         h1 {
             font-size: 32px;
@@ -40,6 +65,9 @@
             font-style: normal;
             text-align: center;
             padding-bottom: 24px;
+            @media only screen and (min-width: 1440px) {
+                padding: 0;
+            }
         }
 
         hr {
@@ -47,12 +75,17 @@
             width: 80px;
             height: 1px;
             opacity: 0.15;
+            @media only screen and (min-width: 1440px) {
+                display: none;
+            }
         }
     }
 
     .days-left {
-        p {
-            padding-bottom: 32px;
+        padding-bottom: 0;
+        margin-bottom: 10px;
+        @media only screen and (min-width: 1440px) {
+            margin: 0;
         }
     }
 
@@ -62,6 +95,10 @@
         appearance: none;
         width: 279px;
         height: 12px;
+        @media only screen and (min-width: 1440px) {
+            width: 634px;
+            margin-left: 48px;
+        }
 
         &::-webkit-progress-bar {
             mix-blend-mode: normal;

@@ -10,6 +10,9 @@
     background-color: $whiteColor;
     border-radius: 8px;
     border: 1px solid $mainBorderColor;
+    @media only screen and (min-width: 1440px) {
+        width: 730px;
+    }
 
     h2 {
         text-align: left;
@@ -17,6 +20,10 @@
         font-weight: 700;
         line-height: 22px;
         padding: 40px 0 24px 24px;
+        @media only screen and (min-width: 1440px) {
+            font-size: 20px;
+            padding: 48px 0 35px 48px;
+        }
     }
 
     p {
@@ -26,10 +33,18 @@
         font-weight: 400;
         line-height: 24px;
         padding: 0 23px 24px 24px;
+        @media only screen and (min-width: 1440px) {
+            font-size: 16px;
+            line-height: 30px;
+            padding: 0 48px 40px 48px;
+        }
     }
 
     .second {
         padding-bottom: 35px;
+        @media only screen and (min-width: 1440px) {
+            padding-bottom: 40px;
+        }
     }
 
     .bamboo,
@@ -39,18 +54,48 @@
         border: 1px solid $standsBorderColor;
         border-radius: 8px;
         margin: 0 24px 24px 24px;
+        @media only screen and (min-width: 1440px) {
+            margin: 0 48px 24px 48px;
+        }
 
         p {
             padding: 0 22px 24px 24px;
+            @media only screen and (min-width: 1440px) {
+                font-size: 16px;
+                line-height: 30px;
+                padding-left: 32px;
+            }
+        }
+    }
+
+    .stands-h3 {
+        @media only screen and (min-width: 1440px) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+    .button-left {
+        @media only screen and (min-width: 1440px) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-bottom: 32px;
         }
     }
 
     .out-of-stock {
         opacity: 0.5;
-        button {
+        .reward {
             opacity: 0.5;
             mix-blend-mode: normal;
             background-color: $brownishColor;
+            &:hover {
+                background-color: $brownishColor;
+            }
         }
     }
 
@@ -64,6 +109,10 @@
         padding-bottom: 8px;
         font-size: 14px;
         font-weight: 700;
+        @media only screen and (min-width: 1440px) {
+            padding: 38px 0 24px 32px;
+            font-size: 18px;
+        }
     }
 
     .pledge {
@@ -72,6 +121,14 @@
         color: $buttonBlueColor;
         padding-left: 24px;
         padding-bottom: 24px;
+        @media only screen and (min-width: 1440px) {
+            padding: 0;
+            margin: 0;
+            font-size: 15px;
+            font-weight: 500;
+            padding-right: 32px;
+            padding-top: 40px;
+        }
     }
 
     .left {
@@ -80,6 +137,9 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        @media only screen and (min-width: 1440px) {
+            padding: 0;
+        }
         h1 {
             font-size: 32px;
             font-weight: 700;
@@ -104,5 +164,15 @@
         height: 48px;
         border-radius: 33.5px;
         margin-bottom: 24px;
+        cursor: pointer;
+        &:hover {
+            background-color: $buttonHoverBlueColor;
+        }
+        &:active {
+            background-color: $buttonBlueColor;
+        }
+        @media only screen and (min-width: 1440px) {
+            margin: 0;
+        }
     }
 }

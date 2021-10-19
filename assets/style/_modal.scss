@@ -1,35 +1,58 @@
 @use '_variables' as *;
 
 #modal {
-    display: none;
+    //display: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     z-index: 1000;
     top: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: $modalBackgroundColor;
 
     .modal {
-        display: none;
-        margin-top: 121px;
-        margin-right: 24px;
-        margin-left: 24px;
-        margin-bottom: 120px;
+        //display: none;
+        margin: 121px 24px 120px 24px;
         background-color: $whiteColor;
         border-radius: 8px;
         padding-bottom: 31px;
+        @media only screen and (min-width: 1440px) {
+            margin-top: 184px;
+            margin-left: 355px;
+            margin-right: 355px;
+        }
 
         .modal-div {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 32px 24px 24px 24px;
+            @media only screen and (min-width: 1440px) {
+                align-items: flex-start;
+                padding: 48px 32px 16px 48px;
+            }
 
             h2 {
                 font-size: 18px;
                 font-weight: 700;
                 line-height: 22px;
+                @media only screen and (min-width: 1440px) {
+                    font-size: 24px;
+                }
+            }
+
+            svg {
+                cursor: pointer;
+                path {
+                    &:hover {
+                        color: $blackColor;
+                        opacity: 1;
+                    }
+                }
             }
         }
 
@@ -38,6 +61,10 @@
             line-height: 24px;
             color: $paraColor;
             padding: 0 24px 0 24px;
+            @media only screen and (min-width: 1440px) {
+                font-size: 16px;
+                padding: 0 48px 0 48px;
+            }
         }
 
         .no-reward {
@@ -45,9 +72,12 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            border: 1px solid rgba(0, 0, 0, 0.15);
+            border: 1px solid $standsBorderColor;
             border-radius: 8px;
             margin: 24px;
+            @media only screen and (min-width: 1440px) {
+                margin: 32px 47px 24px 48px;
+            }
 
             .radio-div {
                 padding: 0;
@@ -57,20 +87,23 @@
                 padding-left: 24px;
                 padding-top: 33px;
                 padding-bottom: 33px;
-
-                input[type='radio'] {
-                    width: 24px;
-                    height: 24px;
-                    border: 1px solid rgba(0, 0, 0, 0.15);
-                    &:checked {
-                        background-color: $buttonBlueColor;
-                    }
+                @media only screen and (min-width: 1440px) {
+                    padding-left: 28px;
+                    padding-bottom: 17px;
                 }
 
                 h3 {
                     font-size: 14px;
                     font-weight: 700;
                     margin-left: 16px;
+                    cursor: pointer;
+                    &:hover {
+                        color: $buttonBlueColor;
+                    }
+                    @media only screen and (min-width: 1440px) {
+                        font-size: 16px;
+                        margin-left: 24px;
+                    }
                 }
             }
             p {
@@ -79,6 +112,45 @@
                 line-height: 24px;
                 font-weight: 400;
                 padding-bottom: 32px;
+                @media only screen and (min-width: 1440px) {
+                    font-size: 15px;
+                    line-height: 28px;
+                    margin-left: 28px;
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .radio {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            background-clip: content-box;
+            border: 1px solid $standsBorderColor;
+
+            &:hover {
+                border-color: $buttonBlueColor;
+            }
+            &:checked {
+                position: relative;
+                border-color: $buttonBlueColor;
+                width: 24px;
+                height: 24px;
+                border-radius: 15px;
+                background-color: $buttonBlueColor;
+                content: '';
+                display: inline-block;
+                visibility: visible;
+                padding: 6px;
+                border: 1px solid $buttonBlueColor;
+                &:hover {
+                    background-color: $buttonHoverBlueColor;
+                    border-color: $buttonHoverBlueColor;
+                }
             }
         }
 
@@ -89,9 +161,13 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            border: 1px solid rgba(0, 0, 0, 0.15);
+            border: 1px solid $standsBorderColor;
             border-radius: 8px;
             margin: 24px;
+            @media only screen and (min-width: 1440px) {
+                position: relative;
+                margin: 24px 48px 24px 48px;
+            }
 
             .radio-div {
                 padding: 0;
@@ -101,13 +177,30 @@
                 padding-left: 24px;
                 padding-top: 33px;
                 padding-bottom: 33px;
+                @media only screen and (min-width: 1440px) {
+                    padding-left: 28px;
+                    padding-bottom: 17px;
+                }
 
                 .title-div {
                     margin-left: 16px;
+                    @media only screen and (min-width: 1440px) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        margin-left: 24px;
+                    }
 
                     h3 {
                         font-size: 14px;
                         font-weight: 700;
+                        cursor: pointer;
+                        &:hover {
+                            color: $buttonBlueColor;
+                        }
+                        @media only screen and (min-width: 1440px) {
+                            font-size: 16px;
+                        }
                     }
 
                     .pledge-h3 {
@@ -115,6 +208,12 @@
                         font-weight: 500;
                         line-height: 17px;
                         padding-top: 8px;
+                        cursor: default;
+                        @media only screen and (min-width: 1440px) {
+                            padding: 0;
+                            padding-left: 17px;
+                            font-size: 16px;
+                        }
                     }
                 }
             }
@@ -125,6 +224,13 @@
                 line-height: 24px;
                 font-weight: 400;
                 padding-bottom: 24px;
+                @media only screen and (min-width: 1440px) {
+                    font-size: 15px;
+                    line-height: 28px;
+                    margin-left: 28px;
+                    padding-right: 27px;
+                    padding-bottom: 32px;
+                }
             }
 
             .modal-left {
@@ -132,6 +238,12 @@
                 align-items: center;
                 margin-left: 24px;
                 margin-bottom: 32px;
+                @media only screen and (min-width: 1440px) {
+                    margin: 0;
+                    position: absolute;
+                    top: 30px;
+                    right: 28px;
+                }
 
                 h2 {
                     font-size: 18px;
@@ -147,20 +259,16 @@
                 }
             }
 
-            .radio {
-                width: 24px;
-                height: 24px;
-                border: 1px solid rgba(0, 0, 0, 0.15);
-                &:checked {
-                    background-color: $buttonBlueColor;
-                }
-            }
-
             .selected-pledge {
-                display: none;
+                display: flex;
                 flex-direction: column;
                 align-items: center;
-                border-top: 1px solid rgba(0, 0, 0, 0.15);
+                border-top: 1px solid $standsBorderColor;
+                @media only screen and (min-width: 1440px) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                }
 
                 h1 {
                     font-size: 14px;
@@ -169,6 +277,10 @@
                     color: $paraColor;
                     padding-top: 24px;
                     padding-bottom: 16px;
+                    @media only screen and (min-width: 1440px) {
+                        font-size: 15px;
+                        padding: 28px;
+                    }
                 }
 
                 .input-div {
@@ -178,6 +290,10 @@
                     padding-right: 24px;
                     padding-bottom: 24px;
                     position: relative;
+                    @media only screen and (min-width: 1440px) {
+                        padding: 0;
+                        padding-right: 28px;
+                    }
 
                     small {
                         position: absolute;
@@ -189,13 +305,21 @@
                         line-height: 17px;
                         opacity: 0.25;
                         align-items: center;
+                        @media only screen and (min-width: 1440px) {
+                            top: 15px;
+                            left: 30px;
+                        }
                     }
 
                     input {
                         width: 100px;
                         height: 48px;
-                        border: 1px solid rgba(0, 0, 0, 0.15);
+                        border: 1px solid $standsBorderColor;
                         border-radius: 33.5px;
+                        cursor: pointer;
+                        &:hover {
+                            border: 1px solid $buttonBlueColor;
+                        }
                         &::placeholder {
                             font-family: Commissioner;
                             font-style: normal;
@@ -219,6 +343,16 @@
                         font-size: 14px;
                         line-height: 17px;
                         color: $whiteColor;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $buttonHoverBlueColor;
+                        }
+                        &:active {
+                            background-color: $buttonBlueColor;
+                        }
+                        @media only screen and (min-width: 1440px) {
+                            width: 107px;
+                        }
                     }
                 }
             }
@@ -228,6 +362,9 @@
             margin: 0;
             padding: 0;
             margin: 24px;
+            @media only screen and (min-width: 1440px) {
+                margin: 24px 48px 24px 48px;
+            }
         }
 
         .not-available {
@@ -243,10 +380,19 @@
     margin-left: 24px;
     background-color: $whiteColor;
     border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border: 1px solid $mainBorderColor;
+    @media only screen and (min-width: 1440px) {
+        margin-top: 460px;
+        margin-right: 450px;
+        margin-left: 450px;
+    }
 
     svg {
         margin-top: 32px;
+        @media only screen and (min-width: 1440px) {
+            margin-top: 70px;
+            transform: scale(1.6);
+        }
     }
 
     h2 {
@@ -254,6 +400,11 @@
         font-weight: 700;
         line-height: 22px;
         margin-top: 24px;
+        @media only screen and (min-width: 1440px) {
+            font-size: 24px;
+            line-height: 30px;
+            margin-top: 70px;
+        }
     }
 
     p {
@@ -265,6 +416,13 @@
         padding-left: 24px;
         padding-right: 24px;
         line-height: 24px;
+        @media only screen and (min-width: 1440px) {
+            font-size: 16px;
+            line-height: 30px;
+            margin-top: 16px;
+            padding-left: 48px;
+            padding-right: 48px;
+        }
     }
 
     button {
@@ -281,6 +439,17 @@
         line-height: 17px;
         color: $whiteColor;
         margin-bottom: 41px;
+        cursor: pointer;
+        &:hover {
+            background-color: $buttonHoverBlueColor;
+        }
+        &:active {
+            background-color: $buttonBlueColor;
+        }
+        @media only screen and (min-width: 1440px) {
+            margin-top: 32px;
+            margin-bottom: 48px;
+        }
     }
 }
 

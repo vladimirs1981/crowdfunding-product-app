@@ -88,6 +88,7 @@ header .menu-div {
     font-size: 13px;
     font-weight: 500;
     margin-left: 32px;
+    cursor: pointer;
   }
 }
 
@@ -153,6 +154,13 @@ header .menu-div {
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
+}
+.mastercraft .button-div svg {
+  color: #707070;
+}
+.mastercraft .button-div svg path {
+  color: #b1b1b1;
 }
 @media only screen and (min-width: 1440px) {
   .mastercraft .button-div svg {
@@ -173,6 +181,13 @@ header .menu-div {
   font-size: 16px;
   line-height: 20px;
   margin-right: 9px;
+  cursor: pointer;
+}
+.mastercraft .button-div button:hover {
+  background-color: #147a73;
+}
+.mastercraft .button-div button:active {
+  background-color: #3cb3ab;
 }
 @media only screen and (min-width: 1440px) {
   .mastercraft .button-div button {
@@ -197,6 +212,18 @@ header .menu-div {
     color: #7a7a7a;
     margin-right: 48px;
     width: 174px;
+    cursor: pointer;
+  }
+}
+.mastercraft .bookmarked svg {
+  color: #147a73;
+}
+.mastercraft .bookmarked svg path {
+  color: #ffffff;
+}
+@media only screen and (min-width: 1440px) {
+  .mastercraft .bookmarked .bookmark {
+    color: #147a73;
   }
 }
 
@@ -214,6 +241,25 @@ header .menu-div {
   border: 1px solid rgba(0, 0, 0, 0.0497193);
   border-radius: 8px;
 }
+@media only screen and (min-width: 1440px) {
+  .stats {
+    width: 730px;
+    height: 212px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 216px;
+  }
+  .stats .stats-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 32px;
+    align-self: flex-start;
+  }
+}
 .stats .backed {
   margin-top: 32px;
 }
@@ -225,6 +271,17 @@ header .menu-div {
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
+}
+@media only screen and (min-width: 1440px) {
+  .stats .backed,
+.stats .total-backers,
+.stats .days-left {
+    margin: 0;
+    padding-left: 47px;
+    padding-right: 42px;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    align-items: flex-start;
+  }
 }
 .stats .backed h1,
 .stats .total-backers h1,
@@ -243,6 +300,13 @@ header .menu-div {
   text-align: center;
   padding-bottom: 24px;
 }
+@media only screen and (min-width: 1440px) {
+  .stats .backed p,
+.stats .total-backers p,
+.stats .days-left p {
+    padding: 0;
+  }
+}
 .stats .backed hr,
 .stats .total-backers hr,
 .stats .days-left hr {
@@ -251,14 +315,33 @@ header .menu-div {
   height: 1px;
   opacity: 0.15;
 }
-.stats .days-left p {
-  padding-bottom: 32px;
+@media only screen and (min-width: 1440px) {
+  .stats .backed hr,
+.stats .total-backers hr,
+.stats .days-left hr {
+    display: none;
+  }
+}
+.stats .days-left {
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 1440px) {
+  .stats .days-left {
+    margin: 0;
+  }
 }
 .stats progress[value] {
   -webkit-appearance: none;
   appearance: none;
   width: 279px;
   height: 12px;
+}
+@media only screen and (min-width: 1440px) {
+  .stats progress[value] {
+    width: 634px;
+    margin-left: 48px;
+  }
 }
 .stats progress[value]::-webkit-progress-bar {
   mix-blend-mode: normal;
@@ -281,12 +364,23 @@ header .menu-div {
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.0497193);
 }
+@media only screen and (min-width: 1440px) {
+  .about {
+    width: 730px;
+  }
+}
 .about h2 {
   text-align: left;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
   padding: 40px 0 24px 24px;
+}
+@media only screen and (min-width: 1440px) {
+  .about h2 {
+    font-size: 20px;
+    padding: 48px 0 35px 48px;
+  }
 }
 .about p {
   text-align: left;
@@ -296,8 +390,20 @@ header .menu-div {
   line-height: 24px;
   padding: 0 23px 24px 24px;
 }
+@media only screen and (min-width: 1440px) {
+  .about p {
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0 48px 40px 48px;
+  }
+}
 .about .second {
   padding-bottom: 35px;
+}
+@media only screen and (min-width: 1440px) {
+  .about .second {
+    padding-bottom: 40px;
+  }
 }
 .about .bamboo,
 .about .black-edition,
@@ -307,17 +413,53 @@ header .menu-div {
   border-radius: 8px;
   margin: 0 24px 24px 24px;
 }
+@media only screen and (min-width: 1440px) {
+  .about .bamboo,
+.about .black-edition,
+.about .mahogany-edition {
+    margin: 0 48px 24px 48px;
+  }
+}
 .about .bamboo p,
 .about .black-edition p,
 .about .mahogany-edition p {
   padding: 0 22px 24px 24px;
 }
+@media only screen and (min-width: 1440px) {
+  .about .bamboo p,
+.about .black-edition p,
+.about .mahogany-edition p {
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 32px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .about .stands-h3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .about .button-left {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+  }
+}
 .about .out-of-stock {
   opacity: 0.5;
 }
-.about .out-of-stock button {
+.about .out-of-stock .reward {
   opacity: 0.5;
   mix-blend-mode: normal;
+  background-color: #2f2f2f;
+}
+.about .out-of-stock .reward:hover {
   background-color: #2f2f2f;
 }
 .about .mahogany-edition {
@@ -330,6 +472,12 @@ header .menu-div {
   font-size: 14px;
   font-weight: 700;
 }
+@media only screen and (min-width: 1440px) {
+  .about .title {
+    padding: 38px 0 24px 32px;
+    font-size: 18px;
+  }
+}
 .about .pledge {
   padding: 0;
   font-size: 14px;
@@ -337,12 +485,27 @@ header .menu-div {
   padding-left: 24px;
   padding-bottom: 24px;
 }
+@media only screen and (min-width: 1440px) {
+  .about .pledge {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    padding-right: 32px;
+    padding-top: 40px;
+  }
+}
 .about .left {
   padding-left: 24px;
   padding-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+@media only screen and (min-width: 1440px) {
+  .about .left {
+    padding: 0;
+  }
 }
 .about .left h1 {
   font-size: 32px;
@@ -365,10 +528,24 @@ header .menu-div {
   height: 48px;
   border-radius: 33.5px;
   margin-bottom: 24px;
+  cursor: pointer;
+}
+.about .reward:hover {
+  background-color: #147a73;
+}
+.about .reward:active {
+  background-color: #3cb3ab;
+}
+@media only screen and (min-width: 1440px) {
+  .about .reward {
+    margin: 0;
+  }
 }
 
 #modal {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   z-index: 1000;
   top: 0;
@@ -378,14 +555,17 @@ header .menu-div {
   background-color: rgba(0, 0, 0, 0.8);
 }
 #modal .modal {
-  display: none;
-  margin-top: 121px;
-  margin-right: 24px;
-  margin-left: 24px;
-  margin-bottom: 120px;
+  margin: 121px 24px 120px 24px;
   background-color: #ffffff;
   border-radius: 8px;
   padding-bottom: 31px;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal {
+    margin-top: 184px;
+    margin-left: 355px;
+    margin-right: 355px;
+  }
 }
 #modal .modal .modal-div {
   display: flex;
@@ -393,16 +573,40 @@ header .menu-div {
   align-items: center;
   padding: 32px 24px 24px 24px;
 }
+@media only screen and (min-width: 1440px) {
+  #modal .modal .modal-div {
+    align-items: flex-start;
+    padding: 48px 32px 16px 48px;
+  }
+}
 #modal .modal .modal-div h2 {
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .modal-div h2 {
+    font-size: 24px;
+  }
+}
+#modal .modal .modal-div svg {
+  cursor: pointer;
+}
+#modal .modal .modal-div svg path:hover {
+  color: #000000;
+  opacity: 1;
 }
 #modal .modal p {
   font-size: 14px;
   line-height: 24px;
   color: #7a7a7a;
   padding: 0 24px 0 24px;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal p {
+    font-size: 16px;
+    padding: 0 48px 0 48px;
+  }
 }
 #modal .modal .no-reward {
   padding: 0;
@@ -413,6 +617,11 @@ header .menu-div {
   border-radius: 8px;
   margin: 24px;
 }
+@media only screen and (min-width: 1440px) {
+  #modal .modal .no-reward {
+    margin: 32px 47px 24px 48px;
+  }
+}
 #modal .modal .no-reward .radio-div {
   padding: 0;
   display: flex;
@@ -422,18 +631,26 @@ header .menu-div {
   padding-top: 33px;
   padding-bottom: 33px;
 }
-#modal .modal .no-reward .radio-div input[type=radio] {
-  width: 24px;
-  height: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
-#modal .modal .no-reward .radio-div input[type=radio]:checked {
-  background-color: #3cb3ab;
+@media only screen and (min-width: 1440px) {
+  #modal .modal .no-reward .radio-div {
+    padding-left: 28px;
+    padding-bottom: 17px;
+  }
 }
 #modal .modal .no-reward .radio-div h3 {
   font-size: 14px;
   font-weight: 700;
   margin-left: 16px;
+  cursor: pointer;
+}
+#modal .modal .no-reward .radio-div h3:hover {
+  color: #3cb3ab;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .no-reward .radio-div h3 {
+    font-size: 16px;
+    margin-left: 24px;
+  }
 }
 #modal .modal .no-reward p {
   font-size: 14px;
@@ -441,6 +658,45 @@ header .menu-div {
   line-height: 24px;
   font-weight: 400;
   padding-bottom: 32px;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .no-reward p {
+    font-size: 15px;
+    line-height: 28px;
+    margin-left: 28px;
+    padding-right: 0;
+  }
+}
+#modal .modal .radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-clip: content-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+#modal .modal .radio:hover {
+  border-color: #3cb3ab;
+}
+#modal .modal .radio:checked {
+  position: relative;
+  border-color: #3cb3ab;
+  width: 24px;
+  height: 24px;
+  border-radius: 15px;
+  background-color: #3cb3ab;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  padding: 6px;
+  border: 1px solid #3cb3ab;
+}
+#modal .modal .radio:checked:hover {
+  background-color: #147a73;
+  border-color: #147a73;
 }
 #modal .modal .bamboo-stand,
 #modal .modal .black-stand,
@@ -453,6 +709,14 @@ header .menu-div {
   border-radius: 8px;
   margin: 24px;
 }
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand,
+#modal .modal .black-stand,
+#modal .modal .mahogany-stand {
+    position: relative;
+    margin: 24px 48px 24px 48px;
+  }
+}
 #modal .modal .bamboo-stand .radio-div,
 #modal .modal .black-stand .radio-div,
 #modal .modal .mahogany-stand .radio-div {
@@ -464,16 +728,47 @@ header .menu-div {
   padding-top: 33px;
   padding-bottom: 33px;
 }
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .radio-div,
+#modal .modal .black-stand .radio-div,
+#modal .modal .mahogany-stand .radio-div {
+    padding-left: 28px;
+    padding-bottom: 17px;
+  }
+}
 #modal .modal .bamboo-stand .radio-div .title-div,
 #modal .modal .black-stand .radio-div .title-div,
 #modal .modal .mahogany-stand .radio-div .title-div {
   margin-left: 16px;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .radio-div .title-div,
+#modal .modal .black-stand .radio-div .title-div,
+#modal .modal .mahogany-stand .radio-div .title-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 24px;
+  }
 }
 #modal .modal .bamboo-stand .radio-div .title-div h3,
 #modal .modal .black-stand .radio-div .title-div h3,
 #modal .modal .mahogany-stand .radio-div .title-div h3 {
   font-size: 14px;
   font-weight: 700;
+  cursor: pointer;
+}
+#modal .modal .bamboo-stand .radio-div .title-div h3:hover,
+#modal .modal .black-stand .radio-div .title-div h3:hover,
+#modal .modal .mahogany-stand .radio-div .title-div h3:hover {
+  color: #3cb3ab;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .radio-div .title-div h3,
+#modal .modal .black-stand .radio-div .title-div h3,
+#modal .modal .mahogany-stand .radio-div .title-div h3 {
+    font-size: 16px;
+  }
 }
 #modal .modal .bamboo-stand .radio-div .title-div .pledge-h3,
 #modal .modal .black-stand .radio-div .title-div .pledge-h3,
@@ -482,6 +777,16 @@ header .menu-div {
   font-weight: 500;
   line-height: 17px;
   padding-top: 8px;
+  cursor: default;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .radio-div .title-div .pledge-h3,
+#modal .modal .black-stand .radio-div .title-div .pledge-h3,
+#modal .modal .mahogany-stand .radio-div .title-div .pledge-h3 {
+    padding: 0;
+    padding-left: 17px;
+    font-size: 16px;
+  }
 }
 #modal .modal .bamboo-stand .modal-p,
 #modal .modal .black-stand .modal-p,
@@ -492,6 +797,17 @@ header .menu-div {
   font-weight: 400;
   padding-bottom: 24px;
 }
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .modal-p,
+#modal .modal .black-stand .modal-p,
+#modal .modal .mahogany-stand .modal-p {
+    font-size: 15px;
+    line-height: 28px;
+    margin-left: 28px;
+    padding-right: 27px;
+    padding-bottom: 32px;
+  }
+}
 #modal .modal .bamboo-stand .modal-left,
 #modal .modal .black-stand .modal-left,
 #modal .modal .mahogany-stand .modal-left {
@@ -499,6 +815,16 @@ header .menu-div {
   align-items: center;
   margin-left: 24px;
   margin-bottom: 32px;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .modal-left,
+#modal .modal .black-stand .modal-left,
+#modal .modal .mahogany-stand .modal-left {
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    right: 28px;
+  }
 }
 #modal .modal .bamboo-stand .modal-left h2,
 #modal .modal .black-stand .modal-left h2,
@@ -515,25 +841,22 @@ header .menu-div {
   line-height: 18px;
   color: #7a7a7a;
 }
-#modal .modal .bamboo-stand .radio,
-#modal .modal .black-stand .radio,
-#modal .modal .mahogany-stand .radio {
-  width: 24px;
-  height: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
-#modal .modal .bamboo-stand .radio:checked,
-#modal .modal .black-stand .radio:checked,
-#modal .modal .mahogany-stand .radio:checked {
-  background-color: #3cb3ab;
-}
 #modal .modal .bamboo-stand .selected-pledge,
 #modal .modal .black-stand .selected-pledge,
 #modal .modal .mahogany-stand .selected-pledge {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .selected-pledge,
+#modal .modal .black-stand .selected-pledge,
+#modal .modal .mahogany-stand .selected-pledge {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 #modal .modal .bamboo-stand .selected-pledge h1,
 #modal .modal .black-stand .selected-pledge h1,
@@ -545,6 +868,14 @@ header .menu-div {
   padding-top: 24px;
   padding-bottom: 16px;
 }
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .selected-pledge h1,
+#modal .modal .black-stand .selected-pledge h1,
+#modal .modal .mahogany-stand .selected-pledge h1 {
+    font-size: 15px;
+    padding: 28px;
+  }
+}
 #modal .modal .bamboo-stand .selected-pledge .input-div,
 #modal .modal .black-stand .selected-pledge .input-div,
 #modal .modal .mahogany-stand .selected-pledge .input-div {
@@ -554,6 +885,14 @@ header .menu-div {
   padding-right: 24px;
   padding-bottom: 24px;
   position: relative;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .selected-pledge .input-div,
+#modal .modal .black-stand .selected-pledge .input-div,
+#modal .modal .mahogany-stand .selected-pledge .input-div {
+    padding: 0;
+    padding-right: 28px;
+  }
 }
 #modal .modal .bamboo-stand .selected-pledge .input-div small,
 #modal .modal .black-stand .selected-pledge .input-div small,
@@ -568,6 +907,14 @@ header .menu-div {
   opacity: 0.25;
   align-items: center;
 }
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .selected-pledge .input-div small,
+#modal .modal .black-stand .selected-pledge .input-div small,
+#modal .modal .mahogany-stand .selected-pledge .input-div small {
+    top: 15px;
+    left: 30px;
+  }
+}
 #modal .modal .bamboo-stand .selected-pledge .input-div input,
 #modal .modal .black-stand .selected-pledge .input-div input,
 #modal .modal .mahogany-stand .selected-pledge .input-div input {
@@ -575,6 +922,12 @@ header .menu-div {
   height: 48px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 33.5px;
+  cursor: pointer;
+}
+#modal .modal .bamboo-stand .selected-pledge .input-div input:hover,
+#modal .modal .black-stand .selected-pledge .input-div input:hover,
+#modal .modal .mahogany-stand .selected-pledge .input-div input:hover {
+  border: 1px solid #3cb3ab;
 }
 #modal .modal .bamboo-stand .selected-pledge .input-div input::placeholder,
 #modal .modal .black-stand .selected-pledge .input-div input::placeholder,
@@ -601,11 +954,34 @@ header .menu-div {
   font-size: 14px;
   line-height: 17px;
   color: #ffffff;
+  cursor: pointer;
+}
+#modal .modal .bamboo-stand .selected-pledge .input-div button:hover,
+#modal .modal .black-stand .selected-pledge .input-div button:hover,
+#modal .modal .mahogany-stand .selected-pledge .input-div button:hover {
+  background-color: #147a73;
+}
+#modal .modal .bamboo-stand .selected-pledge .input-div button:active,
+#modal .modal .black-stand .selected-pledge .input-div button:active,
+#modal .modal .mahogany-stand .selected-pledge .input-div button:active {
+  background-color: #3cb3ab;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .bamboo-stand .selected-pledge .input-div button,
+#modal .modal .black-stand .selected-pledge .input-div button,
+#modal .modal .mahogany-stand .selected-pledge .input-div button {
+    width: 107px;
+  }
 }
 #modal .modal .mahogany-stand {
   margin: 0;
   padding: 0;
   margin: 24px;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .mahogany-stand {
+    margin: 24px 48px 24px 48px;
+  }
 }
 #modal .modal .not-available {
   opacity: 0.5;
@@ -620,14 +996,34 @@ header .menu-div {
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.0497193);
 }
+@media only screen and (min-width: 1440px) {
+  .modal-success {
+    margin-top: 460px;
+    margin-right: 450px;
+    margin-left: 450px;
+  }
+}
 .modal-success svg {
   margin-top: 32px;
+}
+@media only screen and (min-width: 1440px) {
+  .modal-success svg {
+    margin-top: 70px;
+    transform: scale(1.6);
+  }
 }
 .modal-success h2 {
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
   margin-top: 24px;
+}
+@media only screen and (min-width: 1440px) {
+  .modal-success h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 70px;
+  }
 }
 .modal-success p {
   font-size: 14px;
@@ -638,6 +1034,15 @@ header .menu-div {
   padding-left: 24px;
   padding-right: 24px;
   line-height: 24px;
+}
+@media only screen and (min-width: 1440px) {
+  .modal-success p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 }
 .modal-success button {
   margin-top: 31px;
@@ -653,6 +1058,19 @@ header .menu-div {
   line-height: 17px;
   color: #ffffff;
   margin-bottom: 41px;
+  cursor: pointer;
+}
+.modal-success button:hover {
+  background-color: #147a73;
+}
+.modal-success button:active {
+  background-color: #3cb3ab;
+}
+@media only screen and (min-width: 1440px) {
+  .modal-success button {
+    margin-top: 32px;
+    margin-bottom: 48px;
+  }
 }
 
 .active {

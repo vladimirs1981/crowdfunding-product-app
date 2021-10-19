@@ -91,9 +91,9 @@
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             <g fill="none" fill-rule="evenodd">
-                                <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                                <circle fill="currentColor" cx="28" cy="28" r="28" />
                                 <path
-                                    fill="#B1B1B1"
+                                    fill="currentColor"
                                     d="M23 19v18l5-5.058L33 37V19z"
                                 />
                             </g>
@@ -103,21 +103,24 @@
                 </div>
             </section>
             <section class="stats">
-                <div class="backed">
-                    <h1>$89,914</h1>
-                    <p>of $100,000 backed</p>
-                    <hr />
+                <div class="stats-div">
+                    <div class="backed">
+                        <h1>$89,914</h1>
+                        <p>of $100,000 backed</p>
+                        <hr />
+                    </div>
+                    <div class="total-backers">
+                        <h1>5,007</h1>
+                        <p>total backers</p>
+                        <hr />
+                    </div>
+                    <div class="days-left">
+                        <h1>56</h1>
+                        <p>days left</p>
+                    </div>
                 </div>
-                <div class="total-backers">
-                    <h1>5,007</h1>
-                    <p>total backers</p>
-                    <hr />
-                </div>
-                <div class="days-left">
-                    <h1>56</h1>
-                    <p>days left</p>
-                    <progress id="progres" max="70" value="56">56%</progress>
-                </div>
+                
+                <progress id="progres" max="70" value="56">56%</progress>
             </section>
             <section class="about">
                 <h2>About this project</h2>
@@ -135,47 +138,64 @@
                     notepads, pens, and USB sticks to be stored under the stand.
                 </p>
                 <section class="bamboo">
-                    <h3 class="title">Bamboo Stand</h3>
-                    <h3 class="pledge">Pledge $25 or more</h3>
+                    <div class="stands-h3">
+                        <h3 class="title">Bamboo Stand</h3>
+                        <h3 class="pledge">Pledge $25 or more</h3>
+                    </div>
+                    
                     <p>
                         You get an ergonomic stand made of natural bamboo.
                         You've helped us launch our promotional campaign, and
                         you’ll be added to a special Backer member list.
                     </p>
-                    <div class="left">
-                        <h1>101</h1>
-                        <p>left</p>
+                    <div class="button-left">
+                        <div class="left">
+                            <h1>101</h1>
+                            <p>left</p>
+                        </div>
+                        <button class="reward">Select Reward</button>
                     </div>
-                    <button class="reward">Select Reward</button>
+                    
                 </section>
                 <section class="black-edition">
-                    <h3 class="title">Black Edition Stand</h3>
-                    <h3 class="pledge">Pledge $75 or more</h3>
+                    <div class="stands-h3">
+                        <h3 class="title">Black Edition Stand</h3>
+                        <h3 class="pledge">Pledge $75 or more</h3>
+                    </div>
+                    
                     <p>
                         You get a Black Special Edition computer stand and a
                         personal thank you. You’ll be added to our Backer member
                         list. Shipping is included.
                     </p>
-                    <div class="left">
-                        <h1>64</h1>
-                        <p>left</p>
-                        class="radio"
+                    <div class="button-left">
+                        <div class="left">
+                            <h1>64</h1>
+                            <p>left</p>
+                        </div>
+                        <button class="reward">Select Reward</button>
                     </div>
-                    <button class="reward">Select Reward</button>
+                    
                 </section>
                 <section class="mahogany-edition out-of-stock">
-                    <h3 class="title">Mahogany Special Edition</h3>
-                    <h3 class="pledge">Pledge $200 or more</h3>
+                    <div class="stands-h3">
+                        <h3 class="title">Mahogany Special Edition</h3>
+                        <h3 class="pledge">Pledge $200 or more</h3>
+                    </div>
+                    
                     <p>
                         You get two Special Edition Mahogany stands, a Backer
                         T-Shirt, and a personal thank you. You’ll be added to
                         our Backer member list. Shipping is included.
                     </p>
-                    <div class="left">
-                        <h1>0</h1>
-                        <p>left</p>
+                    <div class="button-left">
+                        <div class="left">
+                            <h1>0</h1>
+                            <p>left</p>
+                        </div>
+                        <button class="reward">Out of Stock</button>
                     </div>
-                    <button class="reward">Out of Stock</button>
+                   
                 </section>
             </section>
         </main>
@@ -199,7 +219,7 @@
                     >
                         <path
                             d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
-                            fill="#000"
+                            fill="currentColor"
                             fill-rule="evenodd"
                             opacity=".4"
                         />
@@ -298,7 +318,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="mahogany-stand not-available">
+                <section class="mahogany-stand">
                     <div class="radio-div">
                         <input
                             class="radio"
@@ -336,7 +356,7 @@
                 </section>
             </section>
             <section class="modal-success">
-                <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+                <svg width="64" height="64" viewBox= "0 0 [width] [height]" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
                         <circle fill="#3CB3AB" cx="32" cy="32" r="32" />
                         <path
