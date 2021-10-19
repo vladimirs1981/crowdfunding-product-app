@@ -41,8 +41,10 @@
                         fill-rule="nonzero"
                     />
                 </svg>
-                <svg
+                <div class="hamburger">
+                    <svg
                     class="menu-button"
+                    id="menu-button"
                     width="16"
                     height="15"
                     xmlns="http://www.w3.org/2000/svg"
@@ -51,6 +53,9 @@
                         <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
                     </g>
                 </svg>
+                <svg  id="close-button" class="menu-button" width="14" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z"/><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z"/></g></svg>
+                </div>
+                
                 <div class="menu-div">
                     <h1>About</h1>
                 <h1>Discover</h1>
@@ -83,9 +88,9 @@
                         A beautiful & handcrafted monitor stand to reduce neck
                         and eye strain.
                     </p>
-                    <div class="button-div">
-                        <button>Back this project</button>
-                        <svg
+                    <div class="button-div" id="button-div">
+                        <button data-button>Back this project</button>
+                        <svg onclick="toggleBookmark()"
                             width="56"
                             height="56"
                             xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +103,7 @@
                                 />
                             </g>
                         </svg>
-                        <button class="bookmark">Bookmark</button>
+                        <button id="bookmarkButton" class="bookmark" onclick="toggleBookmark()">Bookmark</button>
                     </div>
                 </div>
             </section>
@@ -153,7 +158,7 @@
                             <h1>101</h1>
                             <p>left</p>
                         </div>
-                        <button class="reward">Select Reward</button>
+                        <button data-button class="reward">Select Reward</button>
                     </div>
                     
                 </section>
@@ -173,7 +178,7 @@
                             <h1>64</h1>
                             <p>left</p>
                         </div>
-                        <button class="reward">Select Reward</button>
+                        <button data-button class="reward">Select Reward</button>
                     </div>
                     
                 </section>
@@ -193,7 +198,7 @@
                             <h1>0</h1>
                             <p>left</p>
                         </div>
-                        <button class="reward">Out of Stock</button>
+                        <button data-button class="reward">Out of Stock</button>
                     </div>
                    
                 </section>
@@ -212,7 +217,7 @@
             <section class="modal">
                 <div class="modal-div">
                     <h2>Back this project</h2>
-                    <svg
+                    <svg id="closeModal"
                         width="15"
                         height="15"
                         xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +236,7 @@
                 </p>
                 <div class="no-reward">
                     <div class="radio-div">
-                        <input
+                        <input 
                             class="radio"
                             type="radio"
                             name="radio"
@@ -246,9 +251,9 @@
                         up to receive product updates via email.
                     </p>
                 </div>
-                <section class="bamboo-stand">
+                <section data-stand class="bamboo-stand">
                     <div class="radio-div">
-                        <input
+                        <input data-radio
                             class="radio"
                             type="radio"
                             name="radio"
@@ -268,7 +273,7 @@
                         <h2>101</h2>
                         <p>left</p>
                     </div>
-                    <div class="selected-pledge selected">
+                    <div data-pay class="selected-pledge selected">
                         <h1>Enter your pledge</h1>
                         <div class="input-div">
                             <small>$</small>
@@ -282,9 +287,9 @@
                         </div>
                     </div>
                 </section>
-                <section class="black-stand">
+                <section data-stand class="black-stand">
                     <div class="radio-div">
-                        <input
+                        <input data-radio
                             class="radio"
                             type="radio"
                             name="radio"
@@ -304,7 +309,7 @@
                         <h2>64</h2>
                         <p>left</p>
                     </div>
-                    <div class="selected-pledge">
+                    <div data-pay class="selected-pledge">
                         <h1>Enter your pledge</h1>
                         <div class="input-div">
                             <small>$</small>
@@ -318,9 +323,9 @@
                         </div>
                     </div>
                 </section>
-                <section class="mahogany-stand">
+                <section data-stand class="mahogany-stand">
                     <div class="radio-div">
-                        <input
+                        <input data-radio
                             class="radio"
                             type="radio"
                             name="radio"
@@ -340,7 +345,7 @@
                         <h2>0</h2>
                         <p>left</p>
                     </div>
-                    <div class="selected-pledge">
+                    <div data-pay class="selected-pledge">
                         <h1>Enter your pledge</h1>
                         <div class="input-div">
                             <small>$</small>

@@ -64,15 +64,20 @@ header .logo {
     margin-top: 48px;
   }
 }
-header .menu-button {
-  margin-top: 35px;
-  margin-right: 24px;
+header .hamburger {
   z-index: 3;
 }
+header .hamburger .menu-button {
+  margin-top: 35px;
+  margin-right: 24px;
+}
 @media only screen and (min-width: 1440px) {
-  header .menu-button {
+  header .hamburger .menu-button {
     display: none;
   }
+}
+header #close-button {
+  display: none;
 }
 header .menu-div {
   display: none;
@@ -543,7 +548,7 @@ header .menu-div {
 }
 
 #modal {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   position: absolute;
@@ -844,7 +849,7 @@ header .menu-div {
 #modal .modal .bamboo-stand .selected-pledge,
 #modal .modal .black-stand .selected-pledge,
 #modal .modal .mahogany-stand .selected-pledge {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
@@ -1108,6 +1113,10 @@ header .menu-div {
   list-style: none;
   padding: 24px 0 24px 24px;
   border: 1px solid rgba(47, 47, 47, 0.1);
+}
+
+#menu.menu-active {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
