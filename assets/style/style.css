@@ -219,6 +219,12 @@ header .menu-div {
     width: 174px;
     cursor: pointer;
   }
+  .mastercraft .button-div .bookmark:hover {
+    background-color: rgba(47, 47, 47, 0.05);
+  }
+  .mastercraft .button-div .bookmark:active {
+    background-color: rgba(47, 47, 47, 0.05);
+  }
 }
 .mastercraft .bookmarked svg {
   color: #147a73;
