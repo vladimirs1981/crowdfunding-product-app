@@ -3,7 +3,7 @@
 #modal {
     display: none;
 
-    //display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
@@ -67,60 +67,6 @@
             }
         }
 
-        .no-reward {
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            border: 1px solid $standsBorderColor;
-            border-radius: 8px;
-            margin: 24px;
-            @media only screen and (min-width: 1440px) {
-                margin: 32px 47px 24px 48px;
-            }
-
-            .radio-div {
-                padding: 0;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                padding-left: 24px;
-                padding-top: 33px;
-                padding-bottom: 33px;
-                @media only screen and (min-width: 1440px) {
-                    padding-left: 28px;
-                    padding-bottom: 17px;
-                }
-
-                h3 {
-                    font-size: 14px;
-                    font-weight: 700;
-                    margin-left: 16px;
-                    cursor: pointer;
-                    &:hover {
-                        color: $buttonBlueColor;
-                    }
-                    @media only screen and (min-width: 1440px) {
-                        font-size: 16px;
-                        margin-left: 24px;
-                    }
-                }
-            }
-            p {
-                font-size: 14px;
-                color: $paraColor;
-                line-height: 24px;
-                font-weight: 400;
-                padding-bottom: 32px;
-                @media only screen and (min-width: 1440px) {
-                    font-size: 15px;
-                    line-height: 28px;
-                    margin-left: 28px;
-                    padding-right: 0;
-                }
-            }
-        }
-
         .radio {
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -154,6 +100,26 @@
             }
         }
 
+        .no-reward {
+            h3 {
+                margin-left: 16px;
+                font-size: 14px;
+                font-weight: 700;
+                cursor: pointer;
+                &:hover {
+                    color: $buttonBlueColor;
+                }
+                @media only screen and (min-width: 1440px) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .not-available {
+            opacity: 0.5;
+        }
+
+        .no-reward,
         .bamboo-stand,
         .black-stand,
         .mahogany-stand {
@@ -317,6 +283,14 @@
                         border: 1px solid $standsBorderColor;
                         border-radius: 33.5px;
                         cursor: pointer;
+                        font-family: Commissioner;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: $blackColor;
+                        text-align: center;
+                        padding-left: 10px;
                         &:hover {
                             border: 1px solid $buttonBlueColor;
                         }
@@ -328,6 +302,9 @@
                             line-height: 17px;
                             color: $blackColor;
                             text-align: center;
+                        }
+                        &:focus::placeholder {
+                            color: transparent;
                         }
                     }
 
@@ -366,15 +343,14 @@
                 margin: 24px 48px 24px 48px;
             }
         }
-
-        .not-available {
-            opacity: 0.5;
-        }
     }
 }
 
 .modal-success {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 143px;
     margin-right: 24px;
     margin-left: 24px;
@@ -451,11 +427,4 @@
             margin-bottom: 48px;
         }
     }
-}
-
-.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }

@@ -47,6 +47,18 @@
         }
     }
 
+    .out-of-stock {
+        opacity: 0.5;
+        .reward {
+            opacity: 0.5;
+            mix-blend-mode: normal;
+            background-color: $brownishColor;
+            &:hover {
+                background-color: $brownishColor;
+            }
+        }
+    }
+
     .bamboo,
     .black-edition,
     .mahogany-edition {
@@ -84,18 +96,6 @@
             padding-left: 32px;
             padding-right: 32px;
             padding-bottom: 32px;
-        }
-    }
-
-    .out-of-stock {
-        opacity: 0.5;
-        .reward {
-            opacity: 0.5;
-            mix-blend-mode: normal;
-            background-color: $brownishColor;
-            &:hover {
-                background-color: $brownishColor;
-            }
         }
     }
 

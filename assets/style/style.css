@@ -410,6 +410,17 @@ header .menu-div {
     padding-bottom: 40px;
   }
 }
+.about .out-of-stock {
+  opacity: 0.5;
+}
+.about .out-of-stock .reward {
+  opacity: 0.5;
+  mix-blend-mode: normal;
+  background-color: #2f2f2f;
+}
+.about .out-of-stock .reward:hover {
+  background-color: #2f2f2f;
+}
 .about .bamboo,
 .about .black-edition,
 .about .mahogany-edition {
@@ -455,17 +466,6 @@ header .menu-div {
     padding-right: 32px;
     padding-bottom: 32px;
   }
-}
-.about .out-of-stock {
-  opacity: 0.5;
-}
-.about .out-of-stock .reward {
-  opacity: 0.5;
-  mix-blend-mode: normal;
-  background-color: #2f2f2f;
-}
-.about .out-of-stock .reward:hover {
-  background-color: #2f2f2f;
 }
 .about .mahogany-edition {
   margin-bottom: 40px;
@@ -613,65 +613,6 @@ header .menu-div {
     padding: 0 48px 0 48px;
   }
 }
-#modal .modal .no-reward {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-  margin: 24px;
-}
-@media only screen and (min-width: 1440px) {
-  #modal .modal .no-reward {
-    margin: 32px 47px 24px 48px;
-  }
-}
-#modal .modal .no-reward .radio-div {
-  padding: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 24px;
-  padding-top: 33px;
-  padding-bottom: 33px;
-}
-@media only screen and (min-width: 1440px) {
-  #modal .modal .no-reward .radio-div {
-    padding-left: 28px;
-    padding-bottom: 17px;
-  }
-}
-#modal .modal .no-reward .radio-div h3 {
-  font-size: 14px;
-  font-weight: 700;
-  margin-left: 16px;
-  cursor: pointer;
-}
-#modal .modal .no-reward .radio-div h3:hover {
-  color: #3cb3ab;
-}
-@media only screen and (min-width: 1440px) {
-  #modal .modal .no-reward .radio-div h3 {
-    font-size: 16px;
-    margin-left: 24px;
-  }
-}
-#modal .modal .no-reward p {
-  font-size: 14px;
-  color: #7a7a7a;
-  line-height: 24px;
-  font-weight: 400;
-  padding-bottom: 32px;
-}
-@media only screen and (min-width: 1440px) {
-  #modal .modal .no-reward p {
-    font-size: 15px;
-    line-height: 28px;
-    margin-left: 28px;
-    padding-right: 0;
-  }
-}
 #modal .modal .radio {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -703,6 +644,24 @@ header .menu-div {
   background-color: #147a73;
   border-color: #147a73;
 }
+#modal .modal .no-reward h3 {
+  margin-left: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#modal .modal .no-reward h3:hover {
+  color: #3cb3ab;
+}
+@media only screen and (min-width: 1440px) {
+  #modal .modal .no-reward h3 {
+    font-size: 16px;
+  }
+}
+#modal .modal .not-available {
+  opacity: 0.5;
+}
+#modal .modal .no-reward,
 #modal .modal .bamboo-stand,
 #modal .modal .black-stand,
 #modal .modal .mahogany-stand {
@@ -715,13 +674,15 @@ header .menu-div {
   margin: 24px;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand,
+  #modal .modal .no-reward,
+#modal .modal .bamboo-stand,
 #modal .modal .black-stand,
 #modal .modal .mahogany-stand {
     position: relative;
     margin: 24px 48px 24px 48px;
   }
 }
+#modal .modal .no-reward .radio-div,
 #modal .modal .bamboo-stand .radio-div,
 #modal .modal .black-stand .radio-div,
 #modal .modal .mahogany-stand .radio-div {
@@ -734,20 +695,23 @@ header .menu-div {
   padding-bottom: 33px;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .radio-div,
+  #modal .modal .no-reward .radio-div,
+#modal .modal .bamboo-stand .radio-div,
 #modal .modal .black-stand .radio-div,
 #modal .modal .mahogany-stand .radio-div {
     padding-left: 28px;
     padding-bottom: 17px;
   }
 }
+#modal .modal .no-reward .radio-div .title-div,
 #modal .modal .bamboo-stand .radio-div .title-div,
 #modal .modal .black-stand .radio-div .title-div,
 #modal .modal .mahogany-stand .radio-div .title-div {
   margin-left: 16px;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .radio-div .title-div,
+  #modal .modal .no-reward .radio-div .title-div,
+#modal .modal .bamboo-stand .radio-div .title-div,
 #modal .modal .black-stand .radio-div .title-div,
 #modal .modal .mahogany-stand .radio-div .title-div {
     display: flex;
@@ -756,6 +720,7 @@ header .menu-div {
     margin-left: 24px;
   }
 }
+#modal .modal .no-reward .radio-div .title-div h3,
 #modal .modal .bamboo-stand .radio-div .title-div h3,
 #modal .modal .black-stand .radio-div .title-div h3,
 #modal .modal .mahogany-stand .radio-div .title-div h3 {
@@ -763,18 +728,21 @@ header .menu-div {
   font-weight: 700;
   cursor: pointer;
 }
+#modal .modal .no-reward .radio-div .title-div h3:hover,
 #modal .modal .bamboo-stand .radio-div .title-div h3:hover,
 #modal .modal .black-stand .radio-div .title-div h3:hover,
 #modal .modal .mahogany-stand .radio-div .title-div h3:hover {
   color: #3cb3ab;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .radio-div .title-div h3,
+  #modal .modal .no-reward .radio-div .title-div h3,
+#modal .modal .bamboo-stand .radio-div .title-div h3,
 #modal .modal .black-stand .radio-div .title-div h3,
 #modal .modal .mahogany-stand .radio-div .title-div h3 {
     font-size: 16px;
   }
 }
+#modal .modal .no-reward .radio-div .title-div .pledge-h3,
 #modal .modal .bamboo-stand .radio-div .title-div .pledge-h3,
 #modal .modal .black-stand .radio-div .title-div .pledge-h3,
 #modal .modal .mahogany-stand .radio-div .title-div .pledge-h3 {
@@ -785,7 +753,8 @@ header .menu-div {
   cursor: default;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .radio-div .title-div .pledge-h3,
+  #modal .modal .no-reward .radio-div .title-div .pledge-h3,
+#modal .modal .bamboo-stand .radio-div .title-div .pledge-h3,
 #modal .modal .black-stand .radio-div .title-div .pledge-h3,
 #modal .modal .mahogany-stand .radio-div .title-div .pledge-h3 {
     padding: 0;
@@ -793,6 +762,7 @@ header .menu-div {
     font-size: 16px;
   }
 }
+#modal .modal .no-reward .modal-p,
 #modal .modal .bamboo-stand .modal-p,
 #modal .modal .black-stand .modal-p,
 #modal .modal .mahogany-stand .modal-p {
@@ -803,7 +773,8 @@ header .menu-div {
   padding-bottom: 24px;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .modal-p,
+  #modal .modal .no-reward .modal-p,
+#modal .modal .bamboo-stand .modal-p,
 #modal .modal .black-stand .modal-p,
 #modal .modal .mahogany-stand .modal-p {
     font-size: 15px;
@@ -813,6 +784,7 @@ header .menu-div {
     padding-bottom: 32px;
   }
 }
+#modal .modal .no-reward .modal-left,
 #modal .modal .bamboo-stand .modal-left,
 #modal .modal .black-stand .modal-left,
 #modal .modal .mahogany-stand .modal-left {
@@ -822,7 +794,8 @@ header .menu-div {
   margin-bottom: 32px;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .modal-left,
+  #modal .modal .no-reward .modal-left,
+#modal .modal .bamboo-stand .modal-left,
 #modal .modal .black-stand .modal-left,
 #modal .modal .mahogany-stand .modal-left {
     margin: 0;
@@ -831,12 +804,14 @@ header .menu-div {
     right: 28px;
   }
 }
+#modal .modal .no-reward .modal-left h2,
 #modal .modal .bamboo-stand .modal-left h2,
 #modal .modal .black-stand .modal-left h2,
 #modal .modal .mahogany-stand .modal-left h2 {
   font-size: 18px;
   font-weight: 700;
 }
+#modal .modal .no-reward .modal-left p,
 #modal .modal .bamboo-stand .modal-left p,
 #modal .modal .black-stand .modal-left p,
 #modal .modal .mahogany-stand .modal-left p {
@@ -846,6 +821,7 @@ header .menu-div {
   line-height: 18px;
   color: #7a7a7a;
 }
+#modal .modal .no-reward .selected-pledge,
 #modal .modal .bamboo-stand .selected-pledge,
 #modal .modal .black-stand .selected-pledge,
 #modal .modal .mahogany-stand .selected-pledge {
@@ -855,7 +831,8 @@ header .menu-div {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .selected-pledge,
+  #modal .modal .no-reward .selected-pledge,
+#modal .modal .bamboo-stand .selected-pledge,
 #modal .modal .black-stand .selected-pledge,
 #modal .modal .mahogany-stand .selected-pledge {
     flex-direction: row;
@@ -863,6 +840,7 @@ header .menu-div {
     width: 100%;
   }
 }
+#modal .modal .no-reward .selected-pledge h1,
 #modal .modal .bamboo-stand .selected-pledge h1,
 #modal .modal .black-stand .selected-pledge h1,
 #modal .modal .mahogany-stand .selected-pledge h1 {
@@ -874,13 +852,15 @@ header .menu-div {
   padding-bottom: 16px;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .selected-pledge h1,
+  #modal .modal .no-reward .selected-pledge h1,
+#modal .modal .bamboo-stand .selected-pledge h1,
 #modal .modal .black-stand .selected-pledge h1,
 #modal .modal .mahogany-stand .selected-pledge h1 {
     font-size: 15px;
     padding: 28px;
   }
 }
+#modal .modal .no-reward .selected-pledge .input-div,
 #modal .modal .bamboo-stand .selected-pledge .input-div,
 #modal .modal .black-stand .selected-pledge .input-div,
 #modal .modal .mahogany-stand .selected-pledge .input-div {
@@ -892,13 +872,15 @@ header .menu-div {
   position: relative;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .selected-pledge .input-div,
+  #modal .modal .no-reward .selected-pledge .input-div,
+#modal .modal .bamboo-stand .selected-pledge .input-div,
 #modal .modal .black-stand .selected-pledge .input-div,
 #modal .modal .mahogany-stand .selected-pledge .input-div {
     padding: 0;
     padding-right: 28px;
   }
 }
+#modal .modal .no-reward .selected-pledge .input-div small,
 #modal .modal .bamboo-stand .selected-pledge .input-div small,
 #modal .modal .black-stand .selected-pledge .input-div small,
 #modal .modal .mahogany-stand .selected-pledge .input-div small {
@@ -913,13 +895,15 @@ header .menu-div {
   align-items: center;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .selected-pledge .input-div small,
+  #modal .modal .no-reward .selected-pledge .input-div small,
+#modal .modal .bamboo-stand .selected-pledge .input-div small,
 #modal .modal .black-stand .selected-pledge .input-div small,
 #modal .modal .mahogany-stand .selected-pledge .input-div small {
     top: 15px;
     left: 30px;
   }
 }
+#modal .modal .no-reward .selected-pledge .input-div input,
 #modal .modal .bamboo-stand .selected-pledge .input-div input,
 #modal .modal .black-stand .selected-pledge .input-div input,
 #modal .modal .mahogany-stand .selected-pledge .input-div input {
@@ -928,12 +912,22 @@ header .menu-div {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 33.5px;
   cursor: pointer;
+  font-family: Commissioner;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-align: center;
+  padding-left: 10px;
 }
+#modal .modal .no-reward .selected-pledge .input-div input:hover,
 #modal .modal .bamboo-stand .selected-pledge .input-div input:hover,
 #modal .modal .black-stand .selected-pledge .input-div input:hover,
 #modal .modal .mahogany-stand .selected-pledge .input-div input:hover {
   border: 1px solid #3cb3ab;
 }
+#modal .modal .no-reward .selected-pledge .input-div input::placeholder,
 #modal .modal .bamboo-stand .selected-pledge .input-div input::placeholder,
 #modal .modal .black-stand .selected-pledge .input-div input::placeholder,
 #modal .modal .mahogany-stand .selected-pledge .input-div input::placeholder {
@@ -945,6 +939,13 @@ header .menu-div {
   color: #000000;
   text-align: center;
 }
+#modal .modal .no-reward .selected-pledge .input-div input:focus::placeholder,
+#modal .modal .bamboo-stand .selected-pledge .input-div input:focus::placeholder,
+#modal .modal .black-stand .selected-pledge .input-div input:focus::placeholder,
+#modal .modal .mahogany-stand .selected-pledge .input-div input:focus::placeholder {
+  color: transparent;
+}
+#modal .modal .no-reward .selected-pledge .input-div button,
 #modal .modal .bamboo-stand .selected-pledge .input-div button,
 #modal .modal .black-stand .selected-pledge .input-div button,
 #modal .modal .mahogany-stand .selected-pledge .input-div button {
@@ -961,18 +962,21 @@ header .menu-div {
   color: #ffffff;
   cursor: pointer;
 }
+#modal .modal .no-reward .selected-pledge .input-div button:hover,
 #modal .modal .bamboo-stand .selected-pledge .input-div button:hover,
 #modal .modal .black-stand .selected-pledge .input-div button:hover,
 #modal .modal .mahogany-stand .selected-pledge .input-div button:hover {
   background-color: #147a73;
 }
+#modal .modal .no-reward .selected-pledge .input-div button:active,
 #modal .modal .bamboo-stand .selected-pledge .input-div button:active,
 #modal .modal .black-stand .selected-pledge .input-div button:active,
 #modal .modal .mahogany-stand .selected-pledge .input-div button:active {
   background-color: #3cb3ab;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .bamboo-stand .selected-pledge .input-div button,
+  #modal .modal .no-reward .selected-pledge .input-div button,
+#modal .modal .bamboo-stand .selected-pledge .input-div button,
 #modal .modal .black-stand .selected-pledge .input-div button,
 #modal .modal .mahogany-stand .selected-pledge .input-div button {
     width: 107px;
@@ -988,12 +992,12 @@ header .menu-div {
     margin: 24px 48px 24px 48px;
   }
 }
-#modal .modal .not-available {
-  opacity: 0.5;
-}
 
 .modal-success {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 143px;
   margin-right: 24px;
   margin-left: 24px;
@@ -1076,13 +1080,6 @@ header .menu-div {
     margin-top: 32px;
     margin-bottom: 48px;
   }
-}
-
-.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 #menu {
