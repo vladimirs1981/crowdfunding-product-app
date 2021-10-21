@@ -57,12 +57,35 @@ openModalBtn.forEach((openModal) => {
         modalForm.style.display = 'block';
         uncheckRadio();
         removePayCard();
+        if (openModal.classList.contains('bmb')) {
+            document.getElementById('radioBamboo').checked = true;
+            document.getElementById('bamboo-pledge').style.display = 'flex';
+            document.querySelector('.bamboo-stand').style.border =
+                '1px solid #3CB3AB';
+            document.querySelector('.bamboo-stand').scrollIntoView();
+        }
+        if (openModal.classList.contains('blck')) {
+            document.getElementById('radioBlack').checked = true;
+            document.getElementById('black-pledge').style.display = 'flex';
+            document.querySelector('.black-stand').style.border =
+                '1px solid #3CB3AB';
+            document.querySelector('.black-stand').scrollIntoView();
+        }
+        if (openModal.classList.contains('mhg')) {
+            document.getElementById('radioMah').checked = true;
+            document.getElementById('mahogany-pledge').style.display = 'flex';
+            document.querySelector('.mahogany-stand').style.border =
+                '1px solid #3CB3AB';
+            document.querySelector('.mahogany-stand').scrollIntoView();
+        }
     });
 });
 
 //close Modal
 closeModalBtn.addEventListener('click', () => {
     modal.style.display = 'none';
+    uncheckRadio();
+    removePayCard();
 });
 
 //close modal on click
@@ -98,10 +121,15 @@ function uncheckRadio() {
 
 for (let i = 0; i < submitButton.length; i++) {
     submitButton[i].addEventListener('click', () => {
-        if (input[i].value !== '') {
+        if (
+            input[i].value !== '' &&
+            parseInt(input[i].value) >= parseInt(input[i].placeholder)
+        ) {
             backed += parseInt(input[i].value);
             backers++;
             input[i].value = '';
+            totalAmount.innerText = '$' + backed;
+            totalBackers.innerText = backers;
             incrementProgressBarValue();
             openSuccesForm();
             closeFormOnSubmit();
@@ -121,18 +149,17 @@ for (let i = 0; i < submitButton.length; i++) {
             }
 
             //disable forms if left == 0
-            if (itemsLeft[i - 1].innerText == 0) {
-                openModalBtn[i].disabled = true;
-                dataSection[i - 1].classList.add('out-of-stock');
-                radioBtn[i].disabled = true;
-                stand[i].classList.add('not-available');
+            if (!stand[i].classList.contains('no-reward')) {
+                if (itemsLeft[i - 1].innerText == 0) {
+                    openModalBtn[i].disabled = true;
+                    dataSection[i - 1].classList.add('out-of-stock');
+                    radioBtn[i].disabled = true;
+                    stand[i].classList.add('not-available');
+                }
             }
         } else {
             modal.style.display = 'block';
         }
-
-        totalAmount.innerText = '$' + backed;
-        totalBackers.innerText = backers;
     });
 }
 
@@ -152,6 +179,7 @@ function closeFormOnSubmit() {
 
 function openSuccesForm() {
     successForm.style.display = 'flex';
+    window.scrollTo(0, 0);
 }
 
 successBtn.addEventListener('click', () => {

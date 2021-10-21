@@ -2,8 +2,6 @@
 
 #modal {
     display: none;
-
-    // display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
@@ -15,7 +13,6 @@
     background-color: $modalBackgroundColor;
 
     .modal {
-        //display: none;
         margin: 121px 24px 120px 24px;
         background-color: $whiteColor;
         border-radius: 8px;
