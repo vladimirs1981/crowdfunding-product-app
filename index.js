@@ -57,29 +57,34 @@ openModalBtn.forEach((openModal) => {
         modalForm.style.display = 'block';
         uncheckRadio();
         removePayCard();
-        if (openModal.classList.contains('bmb')) {
-            document.getElementById('radioBamboo').checked = true;
-            document.getElementById('bamboo-pledge').style.display = 'flex';
-            document.querySelector('.bamboo-stand').style.border =
-                '1px solid #3CB3AB';
-            document.querySelector('.bamboo-stand').scrollIntoView();
-        }
-        if (openModal.classList.contains('blck')) {
-            document.getElementById('radioBlack').checked = true;
-            document.getElementById('black-pledge').style.display = 'flex';
-            document.querySelector('.black-stand').style.border =
-                '1px solid #3CB3AB';
-            document.querySelector('.black-stand').scrollIntoView();
-        }
-        if (openModal.classList.contains('mhg')) {
-            document.getElementById('radioMah').checked = true;
-            document.getElementById('mahogany-pledge').style.display = 'flex';
-            document.querySelector('.mahogany-stand').style.border =
-                '1px solid #3CB3AB';
-            document.querySelector('.mahogany-stand').scrollIntoView();
-        }
+        openSelectedPayForm(openModal);
     });
 });
+
+function openSelectedPayForm(button) {
+    if (button.classList.contains('blck')) {
+        document.getElementById('radioBlack').checked = true;
+        document.getElementById('black-pledge').style.display = 'flex';
+        document.querySelector('.black-stand').style.border =
+            '1px solid #3CB3AB';
+        document.querySelector('.black-stand').scrollIntoView();
+    }
+    if (button.classList.contains('mhg')) {
+        document.getElementById('radioMah').checked = true;
+        document.getElementById('mahogany-pledge').style.display = 'flex';
+        document.querySelector('.mahogany-stand').style.border =
+            '1px solid #3CB3AB';
+        document.querySelector('.mahogany-stand').scrollIntoView();
+    }
+
+    if (button.classList.contains('bmb')) {
+        document.getElementById('radioBamboo').checked = true;
+        document.getElementById('bamboo-pledge').style.display = 'flex';
+        document.querySelector('.bamboo-stand').style.border =
+            '1px solid #3CB3AB';
+        document.querySelector('.bamboo-stand').scrollIntoView();
+    }
+}
 
 //close Modal
 closeModalBtn.addEventListener('click', () => {
@@ -133,20 +138,11 @@ for (let i = 0; i < submitButton.length; i++) {
             incrementProgressBarValue();
             openSuccesForm();
             closeFormOnSubmit();
-            //decrement left by class name
-            if (input[i].classList.contains('bamboo-input')) {
-                bambooLeft--;
-                itemsLeft[i - 1].innerText = bambooLeft;
-                itemsLeftModal[i - 1].innerText = bambooLeft;
-            } else if (input[i].classList.contains('black-input')) {
-                blackLeft--;
-                itemsLeft[i - 1].innerText = blackLeft;
-                itemsLeftModal[i - 1].innerText = blackLeft;
-            } else if (input[i].classList.contains('mahogany-input')) {
-                mahoganyLeft--;
-                itemsLeft[i - 1].innerText = mahoganyLeft;
-                itemsLeftModal[i - 1].innerText = mahoganyLeft;
-            }
+            decrementLeftItems(
+                input[i],
+                itemsLeft[i - 1],
+                itemsLeftModal[i - 1]
+            );
 
             //disable forms if left == 0
             if (!stand[i].classList.contains('no-reward')) {
@@ -161,6 +157,22 @@ for (let i = 0; i < submitButton.length; i++) {
             modal.style.display = 'block';
         }
     });
+}
+//decrement left by class name
+function decrementLeftItems(input, itemsLeft, itemsLeftModal) {
+    if (input.classList.contains('bamboo-input')) {
+        bambooLeft--;
+        itemsLeft.innerText = bambooLeft;
+        itemsLeftModal.innerText = bambooLeft;
+    } else if (input.classList.contains('black-input')) {
+        blackLeft--;
+        itemsLeft.innerText = blackLeft;
+        itemsLeftModal.innerText = blackLeft;
+    } else if (input.classList.contains('mahogany-input')) {
+        mahoganyLeft--;
+        itemsLeft.innerText = mahoganyLeft;
+        itemsLeftModal.innerText = mahoganyLeft;
+    }
 }
 
 //progressBar value
