@@ -88,7 +88,7 @@ header .menu-div {
     z-index: 3;
     margin-right: 166px;
   }
-  header .menu-div h1 {
+  header .menu-div h3 {
     color: #ffffff;
     font-size: 13px;
     font-weight: 500;
@@ -294,9 +294,9 @@ header .menu-div {
     align-items: flex-start;
   }
 }
-.stats .backed h1,
-.stats .total-backers h1,
-.stats .days-left h1 {
+.stats .backed h2,
+.stats .total-backers h2,
+.stats .days-left h2 {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
@@ -518,7 +518,8 @@ header .menu-div {
     padding: 0;
   }
 }
-.about .left h1 {
+.about .left h2 {
+  padding: 0;
   font-size: 32px;
   font-weight: 700;
 }
@@ -846,10 +847,10 @@ header .menu-div {
     width: 100%;
   }
 }
-#modal .modal .no-reward .selected-pledge h1,
-#modal .modal .bamboo-stand .selected-pledge h1,
-#modal .modal .black-stand .selected-pledge h1,
-#modal .modal .mahogany-stand .selected-pledge h1 {
+#modal .modal .no-reward .selected-pledge h2,
+#modal .modal .bamboo-stand .selected-pledge h2,
+#modal .modal .black-stand .selected-pledge h2,
+#modal .modal .mahogany-stand .selected-pledge h2 {
   font-size: 14px;
   font-weight: 400;
   line-height: 28px;
@@ -858,10 +859,10 @@ header .menu-div {
   padding-bottom: 16px;
 }
 @media only screen and (min-width: 1440px) {
-  #modal .modal .no-reward .selected-pledge h1,
-#modal .modal .bamboo-stand .selected-pledge h1,
-#modal .modal .black-stand .selected-pledge h1,
-#modal .modal .mahogany-stand .selected-pledge h1 {
+  #modal .modal .no-reward .selected-pledge h2,
+#modal .modal .bamboo-stand .selected-pledge h2,
+#modal .modal .black-stand .selected-pledge h2,
+#modal .modal .mahogany-stand .selected-pledge h2 {
     font-size: 15px;
     padding: 28px;
   }
