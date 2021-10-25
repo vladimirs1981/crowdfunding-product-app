@@ -1,0 +1,39 @@
+$primaryFont: 'Commissioner', sans-serif;
+
+$whiteColor: #ffffff;
+$backgrounDesktopColor: #fafafa;
+$paraColor: #7a7a7a;
+$bookmarkSVGColor: #707070;
+$bookmarkPathColor: #b1b1b1;
+$buttonBlueColor: #3cb3ab;
+$buttonHoverBlueColor: #147a73;
+$backgroundColor: #f2f2f2;
+$greyColor: #979797;
+$brownGrey: #929292;
+$blackColor: #000000;
+$modalBackgroundColor: rgba(0, 0, 0, 0.8);
+$mainBorderColor: rgba(0, 0, 0, 0.0497193);
+$standsBorderColor: rgba(0, 0, 0, 0.15);
+$brownishColor: #2f2f2f;
+$bookmarkButtonColor: rgba(
+    $color: #2f2f2f,
+    $alpha: 0.05,
+);
+
+$menuBackgroundColor: linear-gradient(
+    180deg,
+    $blackColor 0%,
+    rgba(0, 0, 0, 0.0001) 100%
+);
+
+$menuBorderColor: rgba(47, 47, 47, 0.1);
+$statsBorderColor: rgba(
+    $color: #000000,
+    $alpha: 0.15,
+);
+
+$headerLinearGradient: linear-gradient(
+    180deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.0001) 100%
+);

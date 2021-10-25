@@ -1,0 +1,113 @@
+@use '_variables' as *;
+
+.stats {
+    margin-top: 246px;
+    background: $whiteColor;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    width: 327px;
+    height: 412px;
+    border: 1px solid $mainBorderColor;
+    border-radius: 8px;
+    @media only screen and (min-width: 1440px) {
+        width: 730px;
+        height: 212px;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 216px;
+
+        .stats-div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            margin-bottom: 32px;
+            align-self: flex-start;
+        }
+    }
+
+    .backed {
+        margin-top: 32px;
+    }
+
+    .backed,
+    .total-backers,
+    .days-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+        @media only screen and (min-width: 1440px) {
+            margin: 0;
+            padding-left: 47px;
+            padding-right: 42px;
+            border-right: 1px solid $statsBorderColor;
+            align-items: flex-start;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            padding-bottom: 9px;
+        }
+
+        p {
+            font-size: 14px;
+            color: $paraColor;
+            font-style: normal;
+            text-align: center;
+            padding-bottom: 24px;
+            @media only screen and (min-width: 1440px) {
+                padding: 0;
+            }
+        }
+
+        hr {
+            background: $blackColor;
+            width: 80px;
+            height: 1px;
+            opacity: 0.15;
+            @media only screen and (min-width: 1440px) {
+                display: none;
+            }
+        }
+    }
+
+    .days-left {
+        padding-bottom: 0;
+        margin-bottom: 10px;
+        @media only screen and (min-width: 1440px) {
+            margin: 0;
+        }
+    }
+
+    //progress bar
+    progress[value] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 279px;
+        height: 12px;
+        @media only screen and (min-width: 1440px) {
+            width: 634px;
+            margin-left: 48px;
+        }
+
+        &::-webkit-progress-bar {
+            mix-blend-mode: normal;
+            background-color: $backgroundColor;
+            border-radius: 33.5px;
+        }
+        &::-webkit-progress-value {
+            background-color: $buttonBlueColor;
+            border-radius: 33.5px;
+        }
+    }
+}

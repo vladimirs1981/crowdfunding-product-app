@@ -6,16 +6,17 @@ Your challenge is to build out this crowdfunding product page and get it looking
 
 Your users should be able to:
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
-- Make a selection of which pledge to make
-- See an updated progress bar and total money raised based on their pledge total after confirming a pledge
-- See the number of total backers increment by one after confirming a pledge
-- Toggle whether or not the product is bookmarked
+<!-- - View the optimal layout depending on their device's screen size -->
+<!-- - See hover states for interactive elements -->
+
+-   Make a selection of which pledge to make
+-   See an updated progress bar and total money raised based on their pledge total after confirming a pledge
+-   See the number of total backers increment by one after confirming a pledge
+<!-- -   Toggle whether or not the product is bookmarked -->
 
 ## Where to find everything
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
 
 You will find all the required assets in the `/images` folder. The assets are already optimized.
 
