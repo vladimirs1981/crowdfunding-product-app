@@ -33,8 +33,10 @@ function toggleBookmark() {
     element.classList.toggle('bookmarked');
     if (element.classList.contains('bookmarked')) {
         bookmarkButton.innerText = 'Bookmarked';
+        bookmarkButton.style.paddingLeft = '18px';
     } else {
         bookmarkButton.innerText = 'Bookmark';
+        bookmarkButton.style.paddingLeft = '0';
     }
 }
 

@@ -288,6 +288,9 @@
                         color: $blackColor;
                         text-align: center;
                         padding-left: 10px;
+                        &:focus {
+                            outline: none;
+                        }
                         &:hover {
                             border: 1px solid $buttonBlueColor;
                         }

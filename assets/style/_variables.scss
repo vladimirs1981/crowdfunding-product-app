@@ -31,3 +31,9 @@ $statsBorderColor: rgba(
     $color: #000000,
     $alpha: 0.15,
 );
+
+$headerLinearGradient: linear-gradient(
+    180deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.0001) 100%
+);
